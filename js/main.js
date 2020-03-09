@@ -22,7 +22,7 @@ fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${art
       let newContent = document.createTextNode(toptracks.toptracks.track[i].name)
         li.appendChild(newContent);
         ul.appendChild(li);
-
+ //this section I received helped from Seth on how to move from console.log to the inner html side 
 
       li.innerHTML=toptracks.toptracks.track[i].name
     })
@@ -33,3 +33,5 @@ fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${art
       alert("sorry, there are no results for your search")
   });
 })
+
+// worked with Seth (alumni) to better understand how this API works and what is being done in the console log before showing it on the inner html for the user to see
